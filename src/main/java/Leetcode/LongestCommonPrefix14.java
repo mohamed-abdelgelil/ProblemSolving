@@ -2,7 +2,7 @@ package Leetcode;
 
 import java.util.Arrays;
 
-public class longestCommonPrefix14 {
+public class LongestCommonPrefix14 {
     public static void main(String[] args) {
 
         System.out.println(longestCommonPrefix(new String[]{"flower","flow","flight"}));

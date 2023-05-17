@@ -3,7 +3,7 @@ package Leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class romanToInt13 {
+public class RomanToInt13 {
 
 
     public static void main(java.lang.String[] args) {
