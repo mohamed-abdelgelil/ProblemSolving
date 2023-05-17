@@ -1,16 +1,19 @@
 package Leetcode;
 
+import java.util.Arrays;
+
 public class longestCommonPrefix14 {
     public static void main(String[] args) {
 
         System.out.println(longestCommonPrefix(new String[]{"flower","flow","flight"}));
-       // System.out.println(longestCommonPrefix(new String[]{"dog","racecar","car"}));
+        System.out.println(longestCommonPrefix(new String[]{"dog","racecar","car"}));
     }
 
     public static String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) {
             return "";
         }
+        Arrays.sort(strs);
         String subS = "";
         int i;
         for(int x = strs[0].length(); x >= 0; x--){
@@ -28,9 +31,6 @@ public class longestCommonPrefix14 {
                 break;
             }
         }
-
-
-
         return subS;
     }
 }
