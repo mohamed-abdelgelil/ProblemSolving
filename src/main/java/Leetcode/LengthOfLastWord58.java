@@ -10,6 +10,7 @@ public class LengthOfLastWord58 {
                 return charCount;
             }
         }
+        System.out.println(Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory());
         return charCount;
 
     }
