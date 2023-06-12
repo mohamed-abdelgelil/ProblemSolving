@@ -13,6 +13,16 @@ public class TowSum1 {
     }
 
     public static int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if(map.containsKey(target - nums[i])){
+                return new int[]{map.get(target - nums[i]),i};
+            }
+            map.put(nums[i],i);
+        }
+        return new int[] {};
+    }
+    public static int[] twoSum11(int[] nums, int target) {
 
         int[] result = new int[2];
         if (nums.length == 2) {
@@ -33,12 +43,12 @@ public class TowSum1 {
 
         int diff = 0;
         for (Integer key : map.keySet()) {
-            if (target < 0 && key < 0) {
-                diff = (key + Math.abs(target)) * -1;
-            }else {
-                diff = Math.abs(key - target);
-            }
-
+//            if (target < 0 && key < 0) {
+//                diff = (key + Math.abs(target)) * -1;
+//            }else {
+//                diff = Math.abs(key - target);
+//            }
+            diff = target - key;
             if (map.containsKey(diff)) {//abs(key - target))) {
                 if (map.get(diff).size() == 2) {
                     result[0] = map.get(diff).get(0);
